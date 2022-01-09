@@ -50,12 +50,11 @@ const Footer = ({ classes }) => {
           display="block"
           gutterBottom
         >
-          Join{" "}
-          <Link target="_blank" href="https://discord.gg/zpSQQef">
-            the discord
+          Rejoignez{" "}
+          <Link target="_blank" href="https://discord.gg/233C">
+            le discord
           </Link>{" "}
-          for announcements, questions, feedback and support. Dev or docs
-          contributions are most welcomed.
+          pour participer aux events.
         </Typography>
       </Grid> : ""}
     </Grid>
