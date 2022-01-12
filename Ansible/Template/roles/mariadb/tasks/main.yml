@@ -1,0 +1,6 @@
+- name: Installation Mariadb
+#  become: yes # Ici désactivé car le playbook est lancé avec root
+  apt: name-mariadb state=latest
+
+- name: Démarrage du service
+  service: name=mariadb state=started enabled=true

@@ -1,0 +1,8 @@
+- name: Installation Nginx
+#  become: yes # Ici désactivé car le playbook est lancé avec root
+  apt: name-nginx state=latest
+
+- name: Démarrage du service
+  service: name=nginx state=started enabled=true
+  file: path=/etc/nginx/sites-enabled/default state=absent # permet de changer le fichier par defaut
+  notify: Nginx reload # permet de lancer le handler pour reload le service
