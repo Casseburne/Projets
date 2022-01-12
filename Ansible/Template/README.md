@@ -1,6 +1,6 @@
 # README ANSIBLE
 
-![ansible](ansible.jpg)
+![ansible](./ansible.jpg)
 ## Installation Ansible
 
 Pour (Ubuntu), lancer les commandes suivantes :
