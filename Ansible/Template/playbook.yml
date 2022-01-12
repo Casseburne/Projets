@@ -2,16 +2,12 @@
 - name: Installation des serveurs web
   hosts: SERVEUR-WEB
   remote_user: root
-
-  tasks: 
-    - name: Installation de Git
-       apt: name=git state=latest
-
+  roles:
+    - nginx
+  
 - name: Installation des serveurs bdd
   hosts: SERVEUR-BDD
   remote_user: root
-
-  tasks: 
-    - name: Installation de Mariadb
-       apt: name=mariadb state=latest
+  roles:
+    - mariadb
 ...

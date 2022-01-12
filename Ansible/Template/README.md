@@ -72,10 +72,14 @@ roles
                   |--- main.yml
            |--- defaults
                   |--- main.yml
+           |--- templates
+                  |--- template.jd2
 ```
 * Le dossier tasks va contenir les taches, le fichier main.yml sera chargé par défaut et peut inclure d'autres fichiers de taches via un include.
 * Le dossier handlers va contenir des taches à effectuer lors de la réussite d'autres taches (comme le redémarrage d'nginx par exemple).
 * Le dossier defaults va contenir les variable par défaut pour ce role. Ces variables peuvent être modifiées dans le playbook qui chargera ce role.
+* Le template permet de modifier un fichier de configuration d'un service, par exemple un fichier de configuration serveur nginx.
+Par défaut, Ansible utilise le moteur de template Jinja que l'on peut appeller depuis le module template.
 
 ## Les dossiers handlers
 
@@ -92,5 +96,5 @@ Des variables peuvent aussi être utilisé dans des templates. Par exemple on so
 Connectez-vous sur votre serveur ansible , aller dans le répertoire ou ce situe votre playbook puis éxécuter la commande suivante :
 
 ```
-ansible-playbook -i hosts playbook.yml
+ansible-playbook playbook.yml -i hosts
 ```
